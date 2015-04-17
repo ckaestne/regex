@@ -44,10 +44,10 @@ private class DslGreedyPlus(re: ReNode) extends DslRegex(Plus(re, true)) with Ds
 
 }
 
-private class DslGreedyOpt(re: ReNode) extends DslRegex(Opt(re, true)) with DslGreedyRegex {
+private class DslGreedyOpt(re: ReNode) extends DslRegex(IOpt(re, true)) with DslGreedyRegex {
 
   lazy val nonGreedy: DslRegex =
-    new DslRegex(Opt(re, false))
+    new DslRegex(IOpt(re, false))
 
 }
 

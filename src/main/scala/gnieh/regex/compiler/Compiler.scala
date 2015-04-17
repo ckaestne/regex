@@ -53,14 +53,14 @@ object Compiler {
           val (currentSave1, idx1, v1) = loop(currentSave, startIdx + 1, e1)
           val (currentSave2, idx2, v2) = loop(currentSave1, idx1 + 1, e2)
           (currentSave2, idx2, Vector(Split(startIdx + 1, idx1 + 1)) ++ v1 ++ Vector(Jump(idx2)) ++ v2)
-        case Opt(e, true) =>
+        case IOpt(e, true) =>
           // greedy version
           // split L1, L2
           // L1: comp(e)
           // L2:
           val (currentSave1, idx1, v1) = loop(currentSave, startIdx + 1, e)
           (currentSave1, idx1, Vector(Split(startIdx + 1, idx1)) ++ v1)
-        case Opt(e, false) =>
+        case IOpt(e, false) =>
           // non greedy version
           // split L2, L1
           // L1: comp(e)

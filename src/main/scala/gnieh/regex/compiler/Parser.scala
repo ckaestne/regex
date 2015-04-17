@@ -165,10 +165,10 @@ object Parser {
         // determine whether it is greedy
         nextRawToken(input, newOffset) flatMap {
           case (CHAR('?'), newOffset) =>
-            for(newStack <- reduceOne("?", stack, offset, Opt(_, false)))
+            for(newStack <- reduceOne("?", stack, offset, IOpt(_, false)))
               yield (state, level, newStack, newOffset)
           case (_, _) =>
-            for(newStack <- reduceOne("?", stack, offset, Opt(_, true)))
+            for(newStack <- reduceOne("?", stack, offset, IOpt(_, true)))
               yield (state, level, newStack, newOffset)
         }
       case (LPAR, newOffset) =>

@@ -18,6 +18,8 @@ object RegexBuild extends Build {
     licenses += ("The Apache Software License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt")),
     homepage := Some(url("https://github.com/gnieh/regex")),
     libraryDependencies += "org.scalatest" %% "scalatest" % "2.1.3" % "test",
+    libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.0.1" % "test",
+    libraryDependencies += "de.fosd.typechef" %% "conditionallib" % "0.3.7",
     parallelExecution := false,
     fork in test := true)
     settings(osgiSettings: _*)

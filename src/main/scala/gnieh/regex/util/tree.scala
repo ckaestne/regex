@@ -46,7 +46,7 @@ final case class Plus(n: ReNode, greedy: Boolean) extends ReNode {
   override def toString = s"$n+"
 }
 
-final case class Opt(n: ReNode, greedy: Boolean) extends ReNode {
+final case class IOpt(n: ReNode, greedy: Boolean) extends ReNode {
   override def toString = s"$n?"
 }
 
