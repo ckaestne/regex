@@ -1,4 +1,4 @@
-Variational regular expression library [![Build Status](https://travis-ci.org/gnieh/regex.svg?branch=master)](https://travis-ci.org/gnieh/regex)
+Variational regular expression library [![Build Status](https://travis-ci.org/ckaestne/regex.svg?branch=master)](https://travis-ci.org/ckaestne/regex)
 ===========
 
 based on [Gnieh Regex](https://travis-ci.org/gnieh/regex), an efficient non backtracking regular expression implementation in scala. This is based on the pikevm as described by [Russ Cox](http://swtch.com/~rsc/regexp/)
